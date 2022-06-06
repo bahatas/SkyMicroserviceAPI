@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.sky</groupId>
-        <artifactId>parent-service</artifactId>
+        <artifactId>SkyMicroserviceAPI</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>pom.xml</relativePath> <!-- lookup parent from repository -->
+        <relativePath>/../pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.sky</groupId>
+
     <artifactId>data-saver-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>data-saver-service</name>

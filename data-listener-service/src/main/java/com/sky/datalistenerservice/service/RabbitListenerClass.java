@@ -1,9 +1,9 @@
 package com.sky.datalistenerservice.service;
 
 
-import com.sky.datalistenerservice.model.Event;
-import com.sky.datalistenerservice.model.Market;
-import com.sky.datalistenerservice.model.Outcome;
+import com.sky.parentservice.model.Event;
+import com.sky.parentservice.model.Market;
+import com.sky.parentservice.model.Outcome;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Value;

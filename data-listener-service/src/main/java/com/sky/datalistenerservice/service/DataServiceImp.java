@@ -4,14 +4,14 @@ package com.sky.datalistenerservice.service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import com.sky.datalistenerservice.model.BaseDto;
-import com.sky.datalistenerservice.repository.EventRepository;
-import com.sky.datalistenerservice.repository.MarketRepository;
-import com.sky.datalistenerservice.repository.OutcomeRepository;
+import com.sky.parentservice.model.BaseDto;
+import com.sky.parentservice.repository.EventRepository;
+import com.sky.parentservice.repository.MarketRepository;
+import com.sky.parentservice.repository.OutcomeRepository;
 import com.sky.datalistenerservice.tcp.DataEvent;
 import com.sky.datalistenerservice.util.MapperUtil;
-import com.sky.datalistenerservice.model.*;
-import com.sky.datalistenerservice.repository.*;
+import com.sky.parentservice.model.*;
+import com.sky.parentservice.repository.*;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -22,10 +22,6 @@ import org.springframework.core.annotation.Order;
 import org.springframework.integration.annotation.MessageEndpoint;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-
-
-import java.io.IOException;
-import java.net.Socket;
 
 
 @Slf4j

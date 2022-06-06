@@ -1,41 +1,39 @@
-package com.sky.datalistenerservice.repository;
+package com.sky.parentservice.model;
 
-
-import com.sky.datalistenerservice.model.BaseDto;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@EnableMongoRepositories
-public class MarketEntity implements BaseDto {
+@Builder
+public class Outcome implements BaseDto{
     //header
-    @Id
     private Integer msgId;
     private String operation;
     private String type;
     private String timeStamp;
 
     //body
-    private String eventId;
     private String marketId;
+    private String outcomeId;
     private String name;
+    private String price;
     private String displayed;
     private String suspended;
 
+
     @Override
     public String toString() {
-        return "MarketEntity{" +
+        return "Outcome{" +
                 "msgId=" + msgId +
                 ", operation='" + operation + '\'' +
                 ", type='" + type + '\'' +
                 ", timeStamp='" + timeStamp + '\'' +
-                ", eventId='" + eventId + '\'' +
                 ", marketId='" + marketId + '\'' +
+                ", outcomeId='" + outcomeId + '\'' +
                 ", name='" + name + '\'' +
+                ", price='" + price + '\'' +
                 ", displayed='" + displayed + '\'' +
                 ", suspended='" + suspended + '\'' +
                 '}';

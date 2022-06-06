@@ -1,6 +1,6 @@
-package com.sky.datalistenerservice.repository;
+package com.sky.parentservice.repository;
 
-import com.sky.datalistenerservice.model.BaseDto;
+import com.sky.parentservice.model.BaseDto;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @AllArgsConstructor
 @NoArgsConstructor
 @EnableMongoRepositories
-public class OutcomeEntity implements BaseDto {
+public class OutcomeEntity {
     //header
     @Id
     private Integer msgId;

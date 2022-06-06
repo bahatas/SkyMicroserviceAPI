@@ -1,4 +1,4 @@
-package com.sky.datalistenerservice.repository;
+package com.sky.parentservice.repository;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 

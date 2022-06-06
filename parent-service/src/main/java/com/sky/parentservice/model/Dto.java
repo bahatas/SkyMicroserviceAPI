@@ -1,4 +1,4 @@
-package com.sky.datalistenerservice.model;
+package com.sky.parentservice.model;
 
 
 

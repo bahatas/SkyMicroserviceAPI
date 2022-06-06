@@ -1,14 +1,17 @@
-package com.sky.datalistenerservice.model;
+package com.sky.parentservice.repository;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class Event implements BaseDto {
+@EnableMongoRepositories
+public class EventEntity {
     //header
+    @Id
     private Integer msgId;
     private String operation;
     private String type;
