@@ -1,5 +1,6 @@
 package com.sky.parentservice.repository;
 
+
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -26,20 +27,5 @@ public class EventEntity {
     private String displayed;
     private String suspended;
 
-    @Override
-    public String toString() {
-        return "EventEntity{" +
-                "msgId=" + msgId +
-                ", operation='" + operation + '\'' +
-                ", type='" + type + '\'' +
-                ", timeStamp='" + timeStamp + '\'' +
-                ", eventId='" + eventId + '\'' +
-                ", category='" + category + '\'' +
-                ", subCategory='" + subCategory + '\'' +
-                ", name='" + name + '\'' +
-                ", startTime='" + startTime + '\'' +
-                ", displayed='" + displayed + '\'' +
-                ", suspended='" + suspended + '\'' +
-                '}';
-    }
+
 }

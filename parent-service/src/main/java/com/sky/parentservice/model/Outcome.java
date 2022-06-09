@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Outcome implements BaseDto{
+public class Outcome  implements BaseDto {
     //header
     private Integer msgId;
     private String operation;

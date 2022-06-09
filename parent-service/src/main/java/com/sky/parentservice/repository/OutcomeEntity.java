@@ -1,6 +1,5 @@
 package com.sky.parentservice.repository;
 
-import com.sky.parentservice.model.BaseDto;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;

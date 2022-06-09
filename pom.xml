@@ -3,19 +3,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.sky</groupId>
-        <artifactId>SkyMicroserviceAPI</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.sky</groupId>
     <artifactId>SkyMicroserviceAPI</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <name>SkyMicroserviceAPI</name>
-    <description>Demo project for Spring Boot</description>
+    <description>DATA STREAMING MICROSERVICE API</description>
     <properties>
         <java.version>11</java.version>
     </properties>
+    <modules>
+        <module>data-listener-service</module>
+        <module>data-saver-service</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -76,7 +80,11 @@
             <artifactId>jackson-core</artifactId>
             <version>2.13.3</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.sky</groupId>
+            <artifactId>parent-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

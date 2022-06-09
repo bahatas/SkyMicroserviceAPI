@@ -5,8 +5,8 @@
     <parent>
         <groupId>com.sky</groupId>
         <artifactId>SkyMicroserviceAPI</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>/../pom.xml</relativePath> <!-- lookup parent from repository -->
+        <version>0.1</version>
+        <relativePath>pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>data-saver-service</artifactId>
@@ -26,6 +26,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sky</groupId>
+            <artifactId>parent-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

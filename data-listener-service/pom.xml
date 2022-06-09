@@ -5,11 +5,9 @@
     <parent>
         <groupId>com.sky</groupId>
         <artifactId>SkyMicroserviceAPI</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-        <relativePath>/../pom.xml</relativePath> <!-- lookup parent from repository -->
-
+        <version>0.1</version>
+        <relativePath>pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.sky</groupId>
     <artifactId>data-listener-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>data-listener-service</name>
@@ -33,11 +31,7 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.sky</groupId>
-            <artifactId>parent-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+
     </dependencies>
 
     <build>

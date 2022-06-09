@@ -1,8 +1,9 @@
 package com.sky.parentservice.repository;
 
-
-
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
@@ -11,7 +12,10 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @AllArgsConstructor
 @NoArgsConstructor
 @EnableMongoRepositories
-public class MarketEntity  {
+public class MarketEntity {
+
+
+
     //header
     @Id
     private Integer msgId;

@@ -25,7 +25,7 @@ public class Event implements BaseDto {
 
     @Override
     public String toString() {
-        return "EventEntity{" +
+        return "Event{" +
                 "msgId=" + msgId +
                 ", operation='" + operation + '\'' +
                 ", type='" + type + '\'' +

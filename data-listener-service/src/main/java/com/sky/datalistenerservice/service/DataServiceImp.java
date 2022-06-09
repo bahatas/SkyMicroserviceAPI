@@ -6,8 +6,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.sky.parentservice.model.BaseDto;
 import com.sky.parentservice.repository.EventRepository;
-import com.sky.parentservice.repository.MarketRepository;
-import com.sky.parentservice.repository.OutcomeRepository;
 import com.sky.datalistenerservice.tcp.DataEvent;
 import com.sky.datalistenerservice.util.MapperUtil;
 import com.sky.parentservice.model.*;
@@ -29,18 +27,19 @@ import org.springframework.stereotype.Service;
 @MessageEndpoint
 public class DataServiceImp {
 
+
     @Autowired
     private MapperUtil modelMapper;
-    @Autowired
-    private OutcomeRepository outcomeRepository;
-    @Autowired
-    private EventRepository eventRepository;
-
-    @Autowired
-    MarketRepository marketRepository;
-
+//    @Autowired
+//    private EventRepository eventRepository;
+//    @Autowired
+//    private  MarketRepository marketRepository;
+//    @Autowired
+//    private OutComeRepository outComeRepository;
     @Autowired
     private RabbitMqSender rabbitMqSender;
+
+
 
     @EventListener(DataEvent.class)
     @Order(1)
@@ -84,7 +83,7 @@ public class DataServiceImp {
             System.out.println("outcome = " + outcome.toString());
             OutcomeEntity map = modelMapper.convert(copyoutcome, new OutcomeEntity());
             rabbitMqSender.sendOutcome(copyoutcome);
-            outcomeRepository.save(map);
+//            outComeRepository.save(map); //todo move to another service
             log.info("outcome saved ");
             String json = obj.writeValueAsString(outcome);
             System.out.println("json = " + json);
@@ -99,7 +98,7 @@ public class DataServiceImp {
             System.out.println("market.toString() = " + market.toString());
 
             rabbitMqSender.sendMarket(market);
-            marketRepository.save(convert);
+//            marketRepository.save(convert); //todo move to another service
             log.info("market saved ");
             String json = obj.writeValueAsString(market);
             System.out.println("json = " + json);
@@ -111,7 +110,7 @@ public class DataServiceImp {
 
             rabbitMqSender.sendEvent(event);
             EventEntity map = modelMapper.convert(event, new EventEntity());
-            eventRepository.save(map);
+//            eventRepository.save(map); //todo move to another service
             log.info("event saved ");
             String json = obj.writeValueAsString(event);
             System.out.println("json = " + json);

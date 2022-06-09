@@ -1,4 +1,4 @@
-package com.sky.datalistenerservice.service;
+package com.sky.datasaverservice.service;
 
 
 
@@ -18,17 +18,20 @@ public class RabbitListenerClass {
     @Value("${feedme.rabbitmq.queue}")
     String queueName;
 
-//    @Async
-//    @RabbitListener(queues = "feedme-queue")
-//    public void handleMessage(DataEvent dataEvent){
-//        log.info("rabbit MQ LISTENER METHOD");
-//        System.out.println(dataEvent.toString());
-//    }
+
+    private DataSaveService dataSaveService;
+
+    public RabbitListenerClass(DataSaveService dataSaveService) {
+        this.dataSaveService = dataSaveService;
+    }
+
     @Async
     @RabbitListener(queues = "feedme-queue")
     public void handleMessage(Outcome outcome){
         log.info("rabbitMQ Outcome LISTENER METHOD");
         System.out.println("outcome.toString() = " + outcome.toString());
+        dataSaveService.saveOutcome(outcome);
+
     }
 
     @Async
@@ -36,6 +39,7 @@ public class RabbitListenerClass {
     public void handleMessage(Market market){
         log.info("rabbitMQ Market LISTENER METHOD");
         System.out.println("market.toString() = " + market.toString());
+        dataSaveService.saveMarket(market);
     }
 
     @Async
@@ -43,6 +47,7 @@ public class RabbitListenerClass {
     public void handleMessage(Event event){
         log.info("rabbitMQ Event LISTENER METHOD");
         System.out.println("event.toString() = " + event.toString());
+        dataSaveService.saveEvent(event);
     }
 
 }

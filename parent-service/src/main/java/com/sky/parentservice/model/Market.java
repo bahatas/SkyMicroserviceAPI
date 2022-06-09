@@ -7,7 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Market implements BaseDto{
+public class Market  implements BaseDto{
     //header
     private Integer msgId;
     private String operation;
