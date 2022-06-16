@@ -21,6 +21,8 @@ import org.springframework.integration.annotation.MessageEndpoint;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 
 @Slf4j
 @Service
@@ -46,6 +48,7 @@ public class DataServiceImp {
     @Async
     public BaseDto getDtoObjectFromStream(DataEvent dataEvent) throws JsonProcessingException {
         log.info("getDtoObjectFromStream method is invoked");
+
 
 
         String incomingData = String.valueOf(dataEvent);
