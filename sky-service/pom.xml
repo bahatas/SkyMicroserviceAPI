@@ -12,7 +12,7 @@
     <artifactId>sky-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>sky-service</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Sky Service API</description>
     <properties>
         <java.version>11</java.version>
         <vaadin.version>23.1.0</vaadin.version>
